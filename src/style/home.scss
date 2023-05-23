@@ -1,0 +1,16 @@
+
+
+.title-home{
+    position: relative;
+    img{
+        object-fit: cover;
+        border-radius: 25px;
+    }
+    h1{
+        color: #fff;
+        position: absolute;
+        top:0;
+        left: 30%;
+    }
+}
+

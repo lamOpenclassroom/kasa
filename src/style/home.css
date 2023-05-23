@@ -1,0 +1,14 @@
+.title-home {
+  position: relative;
+}
+.title-home img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 25px;
+}
+.title-home h1 {
+  color: #fff;
+  position: absolute;
+  top: 0;
+  left: 30%;
+}/*# sourceMappingURL=home.css.map */
