@@ -1,5 +1,6 @@
 .title-home {
   position: relative;
+  margin-bottom: 43px;
 }
 .title-home img {
   -o-object-fit: cover;
@@ -11,4 +12,4 @@
   position: absolute;
   top: 0;
   left: 30%;
-}/*# sourceMappingURL=home.css.map */
+}/*# sourceMappingURL=banner.css.map */
