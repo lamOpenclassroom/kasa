@@ -1,4 +1,4 @@
-function Propos(){
+function About(){
     return(
         <div>
             <h1>A propos</h1>
@@ -12,4 +12,4 @@ function Propos(){
 
     
 }
-export default Propos
+export default About

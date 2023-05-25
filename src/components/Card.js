@@ -1,10 +1,16 @@
-function Card(){
+import '../style/card.scss'
+
+function Card({ title,image }) {
+    
     return (
-        <section>
-            <article>
-                <h1>Mes images</h1>
-            </article>
-        </section>
+      
+        <figure>
+            <img src={image} alt='appartement studio'></img>
+            <figcaption>
+                {title}
+            </figcaption>  
+        </figure>
+       
     )
 }
 

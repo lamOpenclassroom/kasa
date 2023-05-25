@@ -1,0 +1,23 @@
+.figure-grid{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background: #F7F7F7;
+    border-radius: 25px;
+    figure{
+        position: relative;
+        margin: 30px;
+        img{
+            object-fit: cover;
+            width: 340px;
+            height: 340px;
+            border-radius: 10px;
+        }
+        figcaption{
+            color: #fff;
+            position: absolute; 
+            bottom: 20px;
+            left: 20px;
+        }
+    }
+}

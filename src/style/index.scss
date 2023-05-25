@@ -5,5 +5,14 @@ html{
         margin: 0;
         font-family: 'Montserrat', sans-serif;
         font-weight: bolder;
+        h1{
+            font-size: 3rem; 
+        }
+        a{
+            font-size: 1.5rem;
+        }
+        figcaption{
+            font-size: 1.12rem;
+        }
     }
 }
