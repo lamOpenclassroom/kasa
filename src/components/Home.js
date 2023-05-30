@@ -7,8 +7,8 @@ function Home({ isData, updateData }) {
         <div>
             <Banner />
             <div className='figure-grid'>
-            {Data.map((item, key) => 
-            (<Card key={key} title={item.title} image={item.cover} data={Data} isData={isData} updateData={updateData} />
+            {Data.map((item) => 
+            (<Card key={item.id} title={item.title} image={item.cover} data={Data} isData={isData} updateData={updateData} />
             ))}
             </div>
         </div>

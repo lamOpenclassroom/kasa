@@ -1,0 +1,22 @@
+.slide{
+    position: relative;
+    img{
+        height: 415px;
+        width: 100vw;
+        object-fit: cover;
+        
+    }  
+    .left{
+        position: absolute;
+        left: 20px;
+        top: 160px;
+        color: #fff;
+    }
+    .right{
+        position: absolute;
+        right: 200px;
+        top: 160px;
+        color: #fff;
+        overflow: hidden;
+    }
+}
