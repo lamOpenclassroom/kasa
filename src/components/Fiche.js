@@ -3,16 +3,16 @@ import '../style/fiche.scss'
 
 function Fiche({ isData, updateData }) {  
         let FicheTitle = isData.title;
-        let MySlide = isData.pictures;
-        console.log(MySlide)
-        let lengthSlide = MySlide.length
-        console.log(lengthSlide)
+        let ArrayOfSlide = isData.pictures;
+
         return (  
                 <div> 
                 <div className='flex-slide'>
-                                {MySlide.map((item, index)=>
-                                        (<Slide key={index} slide={item} lengthSlide={lengthSlide} />))}
-                        </div>
+                                {ArrayOfSlide.map((item, index)=>
+                                        ( <Slide key={index} slide={item} index={index} arrayOfSlide={ArrayOfSlide} />))
+                                } 
+                        
+                       </div>
                         <h1>{FicheTitle}</h1>
                 </div>
         )
