@@ -3,32 +3,38 @@ import { FaChevronLeft } from "react-icons/fa";
 import { FaChevronRight } from "react-icons/fa";
 import { useState } from 'react';
 
-function Slide({ slide, arrayOfSlide, index }) {
-    const [isSlide, setIsSlide] = useState(slide); 
+function Slide({arrayOfSlide }) {
+    let [isCount, setIsCount] = useState(0);
+
+    
     const lengthOfSlide = arrayOfSlide.length;
     console.log(lengthOfSlide) // longueur du tableau 
-    console.log(slide) // affiche chaque slide
-    console.log(index)//affiche l'index de chaque slide
+    //console.log(slide) // affiche chaque slide
+    console.log(arrayOfSlide)//affiche l'index de chaque slide
+    console.log(isCount)
     
-
-    const slideLeft = () => {
-        console.log("slide gauche")
-    }
-
     const slideRight = () => {
-        console.log("slide droite");
+        setIsCount(isCount++);
+        //setIsSlide(arrayOfSlide.filter((item, index) => (index === count)))
+        console.log(isCount);
     }
-        
     
+    const slideLeft = () => {
+        setIsCount(isCount--);
+        //setIsSlide(arrayOfSlide.filter((item, index) => (index === count)))
+        console.log(isCount)
+     }
+   
 
     return (
+        
         <div> 
 
             <div className="slide" >
-            
-                <img className={index} src={isSlide} alt=''></img>
+                <h1>fiche</h1>
+                 <img src={arrayOfSlide[isCount]} alt=''></img>
                 <FaChevronLeft onClick={slideLeft} className='left'  size="6rem" />
-                <FaChevronRight onClick={slideRight} className='right' size="6rem" />
+                <FaChevronRight onClick={slideRight} className='right' size="6rem" /> 
                
             </div>    
             
