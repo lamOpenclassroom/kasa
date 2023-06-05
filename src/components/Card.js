@@ -1,11 +1,10 @@
 import { Link } from 'react-router-dom'
 import '../style/card.scss'
+function Card({ title, image, id}) {
 
-function Card({ title, image, data}) {
-   
     return (
         <figure>
-            <Link to={`/Fiche/`+ data.id} >
+            <Link to={`/Fiche/` + id} >
                 <img  src={image} alt='appartement studio'></img>
                 <figcaption>
                     {title}

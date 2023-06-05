@@ -6,13 +6,14 @@ import About from './components/About';
 import Header from './components/Header';
 import Footer from './components/Footer';
 
+
 function App() {
   return (
     <div className="App">
       <Header/>
       <Routes>
           <Route path="/" element={<Home />}/>
-          <Route path="/Fiche/:data" element={<Fiche />}/>
+          <Route path="/Fiche/:idFiche" element={<Fiche />}/>
           <Route path="/*" element={<Error />}/>
           <Route path="/Propos" element={<About />} />
       </Routes>

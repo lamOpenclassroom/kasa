@@ -3,39 +3,29 @@ import { FaChevronLeft } from "react-icons/fa";
 import { FaChevronRight } from "react-icons/fa";
 import { useState } from 'react';
 
-function Slide({arrayOfSlide }) {
-    let [isCount, setIsCount] = useState(0);
-
-    
-    const lengthOfSlide = arrayOfSlide.length;
-    console.log(lengthOfSlide) // longueur du tableau 
-    //console.log(slide) // affiche chaque slide
-    console.log(arrayOfSlide)//affiche l'index de chaque slide
-    console.log(isCount)
+function Slide({arrayOfSlide}) {
+    const [isCount, setIsCount] = useState(0);
     
     const slideRight = () => {
-        setIsCount(isCount++);
-        //setIsSlide(arrayOfSlide.filter((item, index) => (index === count)))
-        console.log(isCount);
+        isCount !== arrayOfSlide.length - 1 ? setIsCount(isCount + 1) : setIsCount(0);
     }
     
     const slideLeft = () => {
-        setIsCount(isCount--);
-        //setIsSlide(arrayOfSlide.filter((item, index) => (index === count)))
-        console.log(isCount)
-     }
-   
+        setIsCount(isCount - 1);
+        isCount !== 0 ? setIsCount(isCount - 1) : setIsCount(arrayOfSlide.length - 1);
+    }
 
     return (
         
         <div> 
-
-            <div className="slide" >
-                <h1>fiche</h1>
-                 <img src={arrayOfSlide[isCount]} alt=''></img>
-                <FaChevronLeft onClick={slideLeft} className='left'  size="6rem" />
-                <FaChevronRight onClick={slideRight} className='right' size="6rem" /> 
-               
+            <div className="slide">
+                <div className={arrayOfSlide.length === 1 ? 'remove-arrow' : null}>
+                    <FaChevronLeft onClick={slideLeft} className='left' size="6rem"/>
+                    <FaChevronRight onClick={slideRight} className='right' size="6rem" /> 
+                    <p className='slide-number'>{isCount + 1}/{arrayOfSlide.length}</p>
+                </div>
+                <img src={arrayOfSlide[isCount]} alt=''></img>
+                
             </div>    
             
         </div>      
