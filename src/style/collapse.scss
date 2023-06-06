@@ -1,0 +1,36 @@
+.collapse-flex{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    .collapse-flex-column{
+        display: flex;
+        flex-direction: column;
+        width: 582px;
+    }
+    .collapse{
+        display: flex;
+        background: #FF6060;
+        border-radius: 10px;
+        justify-content: space-between;
+        align-items: center;
+        p{
+            color: #FFF;
+            font-weight: bolder;
+            margin-left: 20px;
+        }
+        .chevron{
+            color: #fff;
+            top: 5px;
+            margin-right: 20px;
+            .chevron-remove{
+                display: none;
+            }
+        }
+    }
+    .collapse-description{
+        background: #F7F7F7;
+        padding: 30px 20px;
+        height: auto;
+        border-radius: 10px;
+    }
+}
