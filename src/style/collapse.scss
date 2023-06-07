@@ -18,19 +18,24 @@
             font-weight: bolder;
             margin-left: 20px;
         }
+        .chevron-rotate{
+            transform: rotate(180deg);
+        }
         .chevron{
-            color: #fff;
-            top: 5px;
-            margin-right: 20px;
-            .chevron-remove{
-                display: none;
-            }
+            margin-right: 20px; 
         }
     }
+    
     .collapse-description{
         background: #F7F7F7;
         padding: 30px 20px;
         height: auto;
         border-radius: 10px;
     }
+    .show{
+         visibility: visible;
+     }
+    .hidden{
+         visibility: hidden;
+     }
 }

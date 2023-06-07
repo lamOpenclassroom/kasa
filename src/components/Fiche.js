@@ -1,5 +1,7 @@
 import Slide from './Slide'
 import '../style/fiche.scss'
+import StarOrange from '../assets/image/star-orange.png'
+import StarGrey from '../assets/image/star-grey.png'
 import { useParams } from "react-router-dom"
 import Data from '../data/annonce.json'
 import Collapse from './Collapse'
@@ -16,7 +18,7 @@ function Fiche () {
         let description = dataFind.description;
         let equipment = dataFind.equipments;
         
-
+        //créé un componant profil pour le mileu
         return (  
         <div className='main-contain'> 
                 <div>        
@@ -34,15 +36,22 @@ function Fiche () {
                                 <div className='flex-profil_withoutstars'>
                                         <p>{profilName}</p>
                                         <img src={profilPicture} alt='profil-fiche'></img>
-                                </div>
-                                        <p>tes étoiles</p>
+                                        </div>
+                                        
+                                        <div>
+                                                <img src={StarOrange} alt='étoile orange'></img>
+                                                <img src={StarOrange} alt='étoile orange'></img>
+                                                <img src={StarOrange} alt='étoile orange'></img>
+                                                <img src={StarGrey} alt='étoile grise'></img>
+                                                <img src={StarGrey} alt='étoile grise'></img>
+                                        </div>
                         </div>
-                        </div>
-                        <div>
-                                <Collapse description={description} equipment={equipment} />
-                        </div>
-                        
                 </div>
+                <div>
+                        <Collapse description={description} equipment={equipment} />
+                </div>
+                        
+        </div>
         )
 }
 

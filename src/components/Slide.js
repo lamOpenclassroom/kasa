@@ -1,6 +1,7 @@
 import '../style/slide.scss';
 import { FaChevronLeft } from "react-icons/fa";
 import { FaChevronRight } from "react-icons/fa";
+//Pour toutes le icones importe les de la maquettes
 import { useState } from 'react';
 
 function Slide({arrayOfSlide}) {
