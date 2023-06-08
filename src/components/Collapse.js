@@ -1,30 +1,27 @@
-//Pour toutes le icones importe les de la maquettes
 import "../style/collapse.scss"
 import HighChevron from '../assets/image/high-chevron.png'
 import { useState } from "react";
 
 function Collapse({ description, equipment }) { 
-//utilise un seul chevron que tu pourras changer de rotation
-//useState pour ouvrir ou fermer => voir le site en favoris pour ouvrir ou fermer la description et faire une rotation du chevron
-// Apploquer true ou false pour les 2 collapses  
-    const [openChevron, setOpenChevron] = useState("show");
-    function CloseCollapse(e) {
-        console.log(openChevron)
-        const eventClick = e.target.className;
-        console.log(eventClick)
-        eventClick === "chevron" ? setOpenChevron("hidden") : setOpenChevron("show");
-        openChevron === "hidden" ? setOpenChevron("show") : setOpenChevron("hidden"); 
+    const [closeCollapseDesc, setcloseCollapseDesc] = useState(false);
+    const [closeCollapseEquip, setcloseCollapseEquip] = useState(false);
+
+    function CloseDesc() {
+        setcloseCollapseDesc(!closeCollapseDesc);
     }
-        
+
+    function CloseEquip() {
+        setcloseCollapseEquip(!closeCollapseEquip);
+    }
     
     return (
         <div className="collapse-flex">
               <div className="collapse-flex-column"> 
                 <div className="collapse">
                     <p>Descripion</p>
-                    <img onClick={CloseCollapse} className="chevron" src={HighChevron} alt="chevron en haut"></img>
+                    <img onClick={CloseDesc} className={closeCollapseDesc ? "chevron-rotate":"chevron"} src={HighChevron} alt="chevron en haut"></img>
                 </div>
-                <div className={openChevron}>
+                <div className={closeCollapseDesc ? "hidden":"show"}>
                     <div className="collapse-description">
                         <p>{description}</p>
                     </div>
@@ -33,15 +30,16 @@ function Collapse({ description, equipment }) {
             <div className="collapse-flex-column">
                 <div className="collapse">
                     <p>Equipements</p>
-                    <img className="chevron" src={HighChevron} alt="chevron en haut"></img>
+                    <img onClick={CloseEquip} className={closeCollapseEquip ? "chevron-rotate":"chevron"} src={HighChevron} alt="chevron en haut"></img>
                 </div>
-                
+                <div className={closeCollapseEquip ? "hidden":"show"}>
                 <div className="collapse-description">
                     {equipment.map((item, index) => (
                     <ul key={index}>
                        <li>{item}</li>
                     </ul>
                     ))}  
+                    </div>
                 </div>
             </div>
         </div>

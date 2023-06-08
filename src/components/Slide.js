@@ -1,7 +1,6 @@
 import '../style/slide.scss';
-import { FaChevronLeft } from "react-icons/fa";
-import { FaChevronRight } from "react-icons/fa";
-//Pour toutes le icones importe les de la maquettes
+import ChevronLeft from '../assets/image/left-chevron.png'
+import ChevronRight from '../assets/image/right-chevron.png'
 import { useState } from 'react';
 
 function Slide({arrayOfSlide}) {
@@ -21,11 +20,11 @@ function Slide({arrayOfSlide}) {
         <div> 
             <div className="slide">
                 <div className={arrayOfSlide.length === 1 ? 'remove-arrow' : null}>
-                    <FaChevronLeft onClick={slideLeft} className='left' size="6rem"/>
-                    <FaChevronRight onClick={slideRight} className='right' size="6rem" /> 
+                    <img src={ChevronLeft} alt='chevron à gauche' onClick={slideLeft} className='left'></img>
+                    <img src={ChevronRight} alt='chevron à droite' onClick={slideRight} className='right'></img>
                     <p className='slide-number'>{isCount + 1}/{arrayOfSlide.length}</p>
                 </div>
-                <img src={arrayOfSlide[isCount]} alt=''></img>
+                <img className="image-apartment" src={arrayOfSlide[isCount]} alt=''></img>
                 
             </div>    
             

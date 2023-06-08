@@ -2,25 +2,27 @@ import Slide from './Slide'
 import '../style/fiche.scss'
 import StarOrange from '../assets/image/star-orange.png'
 import StarGrey from '../assets/image/star-grey.png'
-import { useParams } from "react-router-dom"
+import {useParams} from "react-router-dom"
 import Data from '../data/annonce.json'
 import Collapse from './Collapse'
 
-function Fiche () {  
-        const {idFiche} = useParams();
+function Fiche() { 
+        const { idFiche } = useParams();
         const dataFind = Data.find(item => item.id === idFiche);
         let pictures = dataFind.pictures;
         let title = dataFind.title;
         let location = dataFind.location;
-        let buttons = dataFind.tags; //couper le tableau tags avec map
+        let buttons = dataFind.tags; 
         let profilName = dataFind.host.name;
         let profilPicture = dataFind.host.picture;
         let description = dataFind.description;
         let equipment = dataFind.equipments;
         
+        
         //créé un componant profil pour le mileu
         return (  
-        <div className='main-contain'> 
+                <div className='main-contain'> 
+                        
                 <div>        
                                 <Slide arrayOfSlide={pictures}/> 
                 </div>
@@ -52,6 +54,7 @@ function Fiche () {
                 </div>
                         
         </div>
+                
         )
 }
 
