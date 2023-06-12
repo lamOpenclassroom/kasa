@@ -1,5 +1,4 @@
 .title-home{
-    position: relative;
     margin-bottom: 43px;
     display: flex;
     align-items: center;
@@ -9,8 +8,21 @@
         border-radius: 25px;
     }
     h1{
+        font-size: 3rem; 
         color: #fff;
         position: absolute;
     }
 }
 
+@media screen and (max-width: 320px){
+    .title-home{
+        margin-bottom: 63px;
+        width: 335px;
+        height: 111px;
+        h1{
+            font-size: 1.5rem;
+            width: 210px;
+        }
+    }
+    
+}

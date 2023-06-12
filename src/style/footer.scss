@@ -6,3 +6,8 @@ footer{
     color: #FFF;
     background: #000;
 }
+@media screen and (max-width: 320px){
+    footer{
+        width:100vw;
+    }
+}

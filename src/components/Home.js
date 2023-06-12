@@ -1,11 +1,12 @@
 import Banner from './Banner'
 import Card from './Card'
 import Data from '../data/annonce.json'
+import '../style/home.scss'
 
 function Home() {
    
     return (
-        <div>
+        <div className='banner-card'>
             <Banner />
             <div className='figure-grid'>
             {Data.map((item) => 

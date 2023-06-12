@@ -5,14 +5,13 @@ import StarOrange from '../assets/image/star-orange.png'
 import StarGrey from '../assets/image/star-grey.png'
 import Data from '../data/annonce.json'
 import Collapse from './Collapse'
-import { useNavigate } from "react-router-dom"
-import { useEffect } from "react"
 
 
-function Fiche() {
 
-                const navigate = useNavigate();//ok
-                const { idFiche } = useParams();//ok
+
+function Fiche({navigate, useEffect}) {
+        
+                const { idFiche } = useParams();
                 const dataFind = Data.find(item => item.id === idFiche);
                 let pictures = dataFind.pictures;
                 let title = dataFind.title;
@@ -22,22 +21,18 @@ function Fiche() {
                 let profilPicture = dataFind.host.picture;
                 let description = dataFind.description;
                 let equipment = dataFind.equipments;
+                
+                useEffect(() => {
+                          idFiche ? alert("OK") : navigate("/*")
+                 });
         
-        
-                 useEffect(() => {
-                        const secondUrlFiche = window.location.pathname;
-                        console.log(secondUrlFiche)
-                         if ((secondUrlFiche) === ('/Fiche/' + { idFiche })) {
-                                 navigate('/*');
-                         } 
-                        });
-                                 return (
-                                         <div className='main-contain'>
+                return     (
+                        <div  className='main-contain'>
                         
-                                                 <div>
+                                        <div>
                                                          <Slide arrayOfSlide={pictures} />
-                                                 </div>
-                                                 <div className='flex-title-profil'>
+                                        </div>
+                                        <div className='flex-title-profil'>
                                                          <div>
                                                                  <h1>{title}</h1>
                                                                  <p>{location}</p>
@@ -59,18 +54,15 @@ function Fiche() {
                                                                          <img src={StarGrey} alt='étoile grise'></img>
                                                                  </div>
                                                          </div>
-                                                 </div>
-                                                 <div>
+                                        </div>
+                                        <div >
                                                          <Collapse description={description} equipment={equipment} />
-                                                 </div>
+                                        </div>
                         
-                                         </div>
-                                 )
-                             
+                                </div>
+                        )
         
-        
-        
-        }
+}
         
         
 export default Fiche;       

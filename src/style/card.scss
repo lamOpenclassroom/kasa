@@ -21,3 +21,16 @@
         }
     }
 }
+@media screen and (max-width: 320px){
+    .figure-grid{
+        background-color: #fff;
+        figure{
+            margin-top: 10px;
+            margin-bottom: 10px;
+            img{
+                width: 100vw;
+                height: 255px;
+            }
+        }
+    }
+}

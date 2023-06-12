@@ -6,7 +6,6 @@ html{
         font-family: 'Montserrat', sans-serif;
         font-weight: bolder;
         h1{
-            font-size: 3rem; 
             color: #FF6060;
             margin: 30px 0 0;
         }
@@ -26,5 +25,10 @@ html{
             list-style-type: none;
             color: #FF6060;
         }
+    }
+}
+@media screen and (max-width: 320px){
+    html{
+        margin:20px
     }
 }

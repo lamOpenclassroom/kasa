@@ -1,0 +1,8 @@
+@media screen and (max-width: 320px){
+    .banner-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+}
