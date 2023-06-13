@@ -34,3 +34,14 @@
     }
 }
 
+@media screen and (max-width:320px) {
+.slide{
+    .image-apartment {
+        height: auto;
+    }
+    .right, .left{
+        width: 20px;
+        top: 90px;
+    }
+}
+}

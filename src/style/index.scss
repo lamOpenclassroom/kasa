@@ -28,7 +28,14 @@ html{
     }
 }
 @media screen and (max-width: 320px){
-    html{
-        margin:20px
+html{
+    margin: 20px;
+    width: 100vw;
+    h1{
+        font-size:1.12rem;
+    }
+    p{
+        font-size: 0.87rem;
+    }  
     }
 }

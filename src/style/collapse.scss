@@ -36,9 +36,22 @@
         border-radius: 10px;
     }
     .show{
-         visibility: visible;
-     }
+        display: block;
+    }
     .hidden{
-         visibility: hidden;
-     }
+        display: none;
+    }
+}
+@media screen and (max-width:320px){
+.collapse-flex{
+    flex-direction: column;
+    .collapse-flex-column{
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        .collapse{
+            margin-bottom: 20px;
+        }
+    }
+}
 }

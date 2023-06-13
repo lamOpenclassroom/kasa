@@ -26,6 +26,7 @@
                 display: flex;
                 p{
                     width: 93px;
+                    text-align: right;
                 }
                 img{
                     width: 64px;
@@ -36,3 +37,20 @@
             }
         }
     }
+@media screen and (max-width:320px) {
+    .flex-title-profil{
+        flex-direction: column;
+        .flex-profil{
+            flex-direction: row-reverse;
+            width: 100vw;
+            margin-bottom: 16px;
+            .all-stars{
+                width: 100vw;
+                .star{
+                    width: 13px;
+                    height: 13px;
+                }
+            }
+        }
+    }
+}
