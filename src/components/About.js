@@ -1,13 +1,16 @@
-function About(){
-    return(
+import Bannerabout from './Bannerabout'
+import Collapseabout from './Collapseabout'
+ 
+function About() {
+    return (
         <div>
-            <h1>A propos</h1>
-            <p>Fiabilité</p>
-            <p>Respect</p>
-            <p>Service</p>
-            <p>Sécurité</p>
-        </div>    
-        
+            <div>
+                <Bannerabout />
+            </div>
+            <div>
+                <Collapseabout/>
+            </div>
+        </div>
     )
 
     

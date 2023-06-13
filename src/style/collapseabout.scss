@@ -1,13 +1,14 @@
-//---------------------------------collapse Fiche-------------------------------
-
-.collapse-flex{
+.collapse-flex-about{
     display: flex;
     justify-content: space-between;
     margin-bottom: 25px;
-    .collapse-flex-column{
+    flex-direction: column;
+    align-items: center;
+    .collapse-flex-column-about{
         display: flex;
         flex-direction: column;
-        width: 582px;
+        margin-bottom: 30px;
+        width: 1023px;
     }
     .collapse{
         display: flex;
@@ -43,18 +44,4 @@
     .hidden{
         display: none;
     }
-}
-
-@media screen and (max-width:320px){
-.collapse-flex{
-    flex-direction: column;
-    .collapse-flex-column{
-        display: flex;
-        flex-direction: column;
-        width: 100vw;
-        .collapse{
-            margin-bottom: 20px;
-        }
-    }
-}
 }
