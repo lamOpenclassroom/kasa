@@ -7,8 +7,13 @@ header{
         width: 250px;
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
         a{
             color: #FF6060;
+            text-decoration: none;
+        }
+        a:hover{
+            text-decoration:underline;
         }
     }
 }

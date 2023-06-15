@@ -2,44 +2,26 @@ import "../style/collapse.scss"
 import HighChevron from '../assets/image/high-chevron.png'
 import { useState } from "react";
 
-function Collapse({ description, equipment }) { 
+function Collapse({description, equipmentMap,titledesc,titleequip,titleFiab,titleResp,titleServ,titleSec,descFiab,descResp,descServ,descSec}) { 
     const [closeCollapseDesc, setcloseCollapseDesc] = useState(false);
-    const [closeCollapseEquip, setcloseCollapseEquip] = useState(false);
-
+   
     function CloseDesc() {
         setcloseCollapseDesc(!closeCollapseDesc);
     }
 
-    function CloseEquip() {
-        setcloseCollapseEquip(!closeCollapseEquip);
-    }
-    
     return (
+
         <div className="collapse-flex">
-              <div className="collapse-flex-column"> 
+            <div className="collapse-flex-column"> 
                 <div className="collapse">
-                    <p>Descripion</p>
+                    <p>{titledesc}{titleequip}{titleFiab}{titleResp}{titleServ}{titleSec}</p>
                     <img onClick={CloseDesc} className={closeCollapseDesc ? "chevron-rotate":"chevron"} src={HighChevron} alt="chevron en haut"></img>
                 </div>
                 <div className={closeCollapseDesc ? "hidden":"show"}>
                     <div className="collapse-description">
-                        <p>{description}</p>
-                    </div>
-                </div>
-            </div>
-            <div className="collapse-flex-column">
-                <div className="collapse">
-                    <p>Equipements</p>
-                    <img onClick={CloseEquip} className={closeCollapseEquip ? "chevron-rotate":"chevron"} src={HighChevron} alt="chevron en haut"></img>
-                </div>
-                <div className={closeCollapseEquip ? "hidden":"show"}>
-                <div className="collapse-description">
-                    {equipment.map((item, index) => (
-                    <ul key={index}>
-                       <li>{item}</li>
-                    </ul>
-                    ))}  
-                    </div>
+                        <p>{description}{descFiab}{descResp}{descServ}{descSec}</p>
+                        {equipmentMap}
+                    </div>   
                 </div>
             </div>
         </div>

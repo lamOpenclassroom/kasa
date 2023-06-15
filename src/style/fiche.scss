@@ -1,4 +1,3 @@
-
     .show{
         visibility: visible;
     }
@@ -37,6 +36,10 @@
             }
         }
     }
+    .my-collapse{
+        display: flex;
+        justify-content: space-between;
+    }
 @media screen and (max-width:320px) {
     .flex-title-profil{
         flex-direction: column;
@@ -52,5 +55,8 @@
                 }
             }
         }
+    }
+    .my-collapse{
+        flex-direction: column;
     }
 }

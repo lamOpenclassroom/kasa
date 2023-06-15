@@ -1,4 +1,3 @@
-//import { Navigate } from "react-router-dom"
 import { useParams } from "react-router-dom"
 import Slide from './Slide'
 import '../style/fiche.scss'
@@ -6,13 +5,16 @@ import StarOrange from '../assets/image/star-orange.png'
 import StarGrey from '../assets/image/star-grey.png'
 import Data from '../data/annonce.json'
 import Collapse from './Collapse'
-//import { useEffect } from "react"
-
-
+import Error from "./Error"
 
 function Fiche() {
         const { idFiche } = useParams();
         const dataFind = Data.find(item => item.id === idFiche);
+
+        if (dataFind === undefined) {
+                return <Error />;
+        }
+        
         let pictures = dataFind.pictures;
         let title = dataFind.title;
         let location = dataFind.location;
@@ -21,18 +23,17 @@ function Fiche() {
         let profilPicture = dataFind.host.picture;
         let description = dataFind.description;
         let equipment = dataFind.equipments;
+        let equipmentMap =
+                equipment.map(((item, index) => (
+                        <ul key={index}>
+                                <li key={index}>{item}</li>
+                        </ul>)
+                ));
         
-        let trueFind = dataFind.id.includes(idFiche)
-        console.log(trueFind)
-        
-        // useEffect(() => {
-        //         (trueFind !== true) ? <div> <Navigate replace to={"/*"} /></div> : alert("OK j'AFFICHE");
-        // },[trueFind])
         
         return   (
       
-                < div className = 'main-contain' >
-                        
+                < div className = 'main-contain' >                      
                                 <div>
                                         <Slide arrayOfSlide={pictures} />
                                 </div>
@@ -42,7 +43,7 @@ function Fiche() {
                                                 <h1>{title}</h1>
                                                 <p>{location}</p>
                                 
-                                                {buttons.map((item, index) => (<button key={index}>{item}</button>))}
+                                                {buttons.map((item, index) => (<button key={index}>{item}</button>))} 
                                 
                                         </div>
                                         <div className='flex-profil'>
@@ -61,9 +62,11 @@ function Fiche() {
                                         </div>
                                                         
                                 </div>
-                                <div >
-                                        <Collapse description={description} equipment={equipment} />
-                                </div>        
+                                <div className="my-collapse">
+                                        <Collapse description={description} titledesc={"Description"} />
+                                        <Collapse equipmentMap={<div>{equipmentMap}</div>} titleequip={"Equipements" } />
+                        </div>
+                        
                 </div >
                 )      
                          
