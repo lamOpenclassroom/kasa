@@ -39,6 +39,7 @@
     .my-collapse{
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
     }
 @media screen and (max-width:320px) {
     .flex-title-profil{

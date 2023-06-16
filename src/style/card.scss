@@ -7,10 +7,12 @@
     figure{
         position: relative;
         margin: 30px;
+        width: 340px;
+        height: 340px;
         img{
             object-fit: cover;
-            width: 340px;
-            height: 340px;
+            width: 100%;
+            height: 100%;
             border-radius: 10px;
         }
         figcaption{
@@ -25,12 +27,7 @@
     .figure-grid{
         background-color: #fff;
         figure{
-            margin-top: 10px;
-            margin-bottom: 10px;
-            img{
-                width: 100vw;
-                height: 255px;
-            }
+            margin: 10px 0;
         }
     }
 }

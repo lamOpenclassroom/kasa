@@ -1,9 +1,8 @@
 //---------------------------------collapse Fiche-------------------------------
 
 .collapse-flex{
-    display: flex;
-    justify-content: space-between;
     margin-bottom: 25px;
+    width: 582px;
     .collapse-flex-column{
         display: flex;
         flex-direction: column;
@@ -48,13 +47,9 @@
 @media screen and (max-width:320px){
 .collapse-flex{
     flex-direction: column;
+    width: 100%;
     .collapse-flex-column{
-        display: flex;
-        flex-direction: column;
         width: 100vw;
-        .collapse{
-            margin-bottom: 20px;
-        }
     }
 }
 }

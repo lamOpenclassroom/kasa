@@ -27,6 +27,7 @@ html{
         }
     }
 }
+
 @media screen and (max-width: 320px){
 html{
     margin: 20px;
@@ -38,4 +39,9 @@ html{
         font-size: 0.87rem;
     }  
     }
+}
+@media screen and (max-width: 710px){
+    html{
+        margin:20px;
+    }   
 }
