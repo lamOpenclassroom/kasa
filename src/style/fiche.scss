@@ -40,10 +40,10 @@
             }
         }
     }
-    .my-collapse{
-        display: flex;
-        justify-content: space-between;
-    }
+.my-collapse{
+    display: flex;
+    justify-content: space-between;
+}
 
 .collapse-flex{
     margin-bottom: 25px;
@@ -51,6 +51,7 @@
     .collapse-flex-column{
         display: flex;
         justify-content: space-between;
+       
     }
 }
 

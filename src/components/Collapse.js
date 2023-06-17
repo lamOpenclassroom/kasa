@@ -11,6 +11,7 @@ function Collapse({description, equipmentMap,titledesc,titleequip,titleFiab,titl
 
     return (
 
+        //retrait
         <div className="margin-collapse">
                 <div className="collapse">
                     <p>{titledesc}{titleequip}{titleFiab}{titleResp}{titleServ}{titleSec}</p>
@@ -23,6 +24,7 @@ function Collapse({description, equipmentMap,titledesc,titleequip,titleFiab,titl
                     </div>   
                 </div>
         </div>
+        //retrait
     )
 }
 export default Collapse;

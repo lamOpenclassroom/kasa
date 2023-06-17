@@ -1,6 +1,12 @@
-.margin-collapse{
+.margin-collapse {
     margin-bottom: 20px;
+    
+}
+
+.margin-collapse-fiche{
     width: 582px;
+}
+
 .collapse{
     display: flex;
     background: #FF6060;
@@ -22,7 +28,6 @@
         cursor: pointer;
     }
 }
-}
 
 .collapse-description{
     background: #F7F7F7;
@@ -37,8 +42,9 @@
     display: none;
 }
 
+
 @media screen and (max-width: 320px) {
-    .margin-collapse{
+    .margin-collapse-fiche{
         width: 100%;
     }
 }

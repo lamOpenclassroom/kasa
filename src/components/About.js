@@ -1,4 +1,4 @@
-import "../style/collapse.scss"
+//import "../style/collapse.scss"
 import "../style/about.scss"
 import Banner from './Banner'
 import montain from '../assets/image/montagne.png'
@@ -19,17 +19,26 @@ function About() {
             <div>
                 <Banner montain={montain}/>
             </div>
-            <div>     
+               
             <div className="collapse-flex-about">
-                <div className="collapse-flex-column-about"> 
-                    <Collapse titleFiab={titleFiab} descFiab={descFiab} />
-                    <Collapse titleResp={titleResp} descResp={descResp} />
-                    <Collapse titleServ={titleServ} descServ={descServ} />
-                    <Collapse titleSec={titleSec} descSec={descSec} />
-                </div>
+                    <div className="collapse-flex-column-about"> 
+                            <div className="margin-collapse-about">
+                            <Collapse titleFiab={titleFiab} descFiab={descFiab} />
+                            </div>
+                            <div className="margin-collapse-about">
+                                <Collapse titleResp={titleResp} descResp={descResp} />
+                            </div>
+                            <div className="margin-collapse-about">
+                                <Collapse titleServ={titleServ} descServ={descServ} />
+                            </div>
+                            <div className="margin-collapse-about">
+                                <Collapse titleSec={titleSec} descSec={descSec} />
+                            </div>
+                    </div>
             </div>
-            </div>        
+                   
         </div>
+       
     )
 
     
