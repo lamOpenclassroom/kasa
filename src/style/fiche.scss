@@ -21,10 +21,10 @@
             display: flex;
             align-items: center;
             flex-direction: column;
+            justify-content: space-between;
             .flex-profil_withoutstars{
                 display: flex;
                 p{
-                    width: 93px;
                     text-align: right;
                 }
                 img{
@@ -34,13 +34,22 @@
                     margin-left: 10px;
                 }
             }
+            .all-stars{
+                max-width: 185px;
+                min-width: 66px;
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                margin-top: 27px;
+            }
         }
     }
     .my-collapse{
         display: flex;
         justify-content: space-between;
-        flex-wrap: wrap;
     }
+
 @media screen and (max-width:320px) {
     .flex-title-profil{
         flex-direction: column;
@@ -49,7 +58,7 @@
             width: 100vw;
             margin-bottom: 16px;
             .all-stars{
-                width: 100vw;
+                max-width: 100px;
                 .star{
                     width: 13px;
                     height: 13px;
@@ -61,3 +70,4 @@
         flex-direction: column;
     }
 }
+

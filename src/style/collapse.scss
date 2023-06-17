@@ -6,7 +6,6 @@
     .collapse-flex-column{
         display: flex;
         flex-direction: column;
-        width: 582px;
     }
     .collapse{
         display: flex;
@@ -66,6 +65,7 @@
         flex-direction: column;
         margin-bottom: 30px;
         width: 1023px;
+        width: 100%;
         .collapse-flex-column{
             width: 100vw;
         }

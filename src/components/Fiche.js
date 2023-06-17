@@ -65,7 +65,7 @@ function Fiche() {
                                 <div className="my-collapse">
                                         <Collapse description={description} titledesc={"Description"} />
                                         <Collapse equipmentMap={<div>{equipmentMap}</div>} titleequip={"Equipements" } />
-                        </div>
+                                </div>
                         
                 </div >
                 )      

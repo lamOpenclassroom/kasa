@@ -20,10 +20,12 @@ function About() {
             </div>
             <div  className="collapse-flex-about">
                 <div className="collapse-flex-column-about"> 
-                    <Collapse titleFiab={titleFiab} descFiab={descFiab} />
-                    <Collapse titleResp={titleResp} descResp={descResp} />
-                    <Collapse titleServ={titleServ} descServ={descServ} />
-                    <Collapse titleSec={titleSec} descSec={descSec} />
+                    <div className="collapse-flex-abouts">
+                        <Collapse titleFiab={titleFiab} descFiab={descFiab} />
+                        <Collapse titleResp={titleResp} descResp={descResp} />
+                        <Collapse titleServ={titleServ} descServ={descServ} />
+                        <Collapse titleSec={titleSec} descSec={descSec} />
+                    </div>
                 </div>
             </div>
         </div>
