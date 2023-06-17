@@ -1,9 +1,4 @@
-    .show{
-        visibility: visible;
-    }
-    .hidden{
-        visibility: hidden;
-    }
+
     .flex-title-profil{
         display: flex;
         justify-content: space-between;
@@ -50,8 +45,17 @@
         justify-content: space-between;
     }
 
+.collapse-flex{
+    margin-bottom: 25px;
+    width: 100%;
+    .collapse-flex-column{
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
 @media screen and (max-width:320px) {
-    .flex-title-profil{
+.flex-title-profil{
         flex-direction: column;
         .flex-profil{
             flex-direction: row-reverse;
@@ -59,15 +63,24 @@
             margin-bottom: 16px;
             .all-stars{
                 max-width: 100px;
-                .star{
+            .star{
                     width: 13px;
                     height: 13px;
-                }
             }
         }
     }
-    .my-collapse{
-        flex-direction: column;
+}
+
+.my-collapse{
+    flex-direction: column;
+        .collapse-flex{
+            flex-direction: column;
+            width: 100%;
+            .collapse-flex-column{
+                width: 100vw;
+                flex-direction: column;
+            }
+        }
     }
 }
 

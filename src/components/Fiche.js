@@ -34,9 +34,9 @@ function Fiche() {
         return   (
       
                 < div className = 'main-contain' >                      
-                                <div>
-                                        <Slide arrayOfSlide={pictures} />
-                                </div>
+                        <div>
+                                <Slide arrayOfSlide={pictures} />
+                        </div>
                                 <div className='flex-title-profil'>
                                                         
                                         <div>
@@ -61,12 +61,15 @@ function Fiche() {
                                                 </div>
                                         </div>
                                                         
+                        </div>
+                        <div className="my-collapse">
+                                <div className="collapse-flex">
+                                        <div className="collapse-flex-column">
+                                                <Collapse description={description} titledesc={"Description"} />
+                                                <Collapse equipmentMap={<div>{equipmentMap}</div>} titleequip={"Equipements"} />
+                                        </div>
                                 </div>
-                                <div className="my-collapse">
-                                        <Collapse description={description} titledesc={"Description"} />
-                                        <Collapse equipmentMap={<div>{equipmentMap}</div>} titleequip={"Equipements" } />
-                                </div>
-                        
+                        </div>
                 </div >
                 )      
                          

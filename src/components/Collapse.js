@@ -11,8 +11,7 @@ function Collapse({description, equipmentMap,titledesc,titleequip,titleFiab,titl
 
     return (
 
-        <div className="collapse-flex">
-            <div className="collapse-flex-column"> 
+        <div className="margin-collapse">
                 <div className="collapse">
                     <p>{titledesc}{titleequip}{titleFiab}{titleResp}{titleServ}{titleSec}</p>
                     <img onClick={CloseDesc} className={closeCollapseDesc ? "chevron-rotate":"chevron"} src={HighChevron} alt="chevron en haut"></img>
@@ -23,7 +22,6 @@ function Collapse({description, equipmentMap,titledesc,titleequip,titleFiab,titl
                         {equipmentMap}
                     </div>   
                 </div>
-            </div>
         </div>
     )
 }

@@ -1,73 +1,47 @@
-//---------------------------------collapse Fiche-------------------------------
-
-.collapse-flex{
-    margin-bottom: 25px;
+.margin-collapse{
+    margin-bottom: 20px;
     width: 582px;
-    .collapse-flex-column{
-        display: flex;
-        flex-direction: column;
-    }
-    .collapse{
-        display: flex;
-        background: #FF6060;
-        border-radius: 10px;
-        justify-content: space-between;
-        align-items: center;
-        p{
-            color: #FFF;
-            font-weight: bolder;
-            margin-left: 20px;
-        }
-        .chevron-rotate{
-            transform: rotate(180deg);
-            margin-right: 20px;
-            cursor: pointer;
-        }
-        .chevron{
-            margin-right: 20px; 
-            cursor: pointer;
-        }
-    }
-    
-    .collapse-description{
-        background: #F7F7F7;
-        padding: 30px 20px;
-        height: auto;
-        border-radius: 10px;
-    }
-    .show{
-        display: block;
-    }
-    .hidden{
-        display: none;
-    }
-}
-
-@media screen and (max-width:320px){
-.collapse-flex{
-    flex-direction: column;
-    width: 100%;
-    .collapse-flex-column{
-        width: 100vw;
-    }
-}
-}
-
-//-------------------------Collapse About--------------------------
-.collapse-flex-about{
+.collapse{
     display: flex;
+    background: #FF6060;
+    border-radius: 10px;
     justify-content: space-between;
-    margin-bottom: 25px;
-    flex-direction: column;
     align-items: center;
-    .collapse-flex-column-about{
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 30px;
-        width: 1023px;
-        width: 100%;
-        .collapse-flex-column{
-            width: 100vw;
-        }
+    p{
+        color: #FFF;
+        font-weight: bolder;
+        margin-left: 20px;
+    }
+    .chevron-rotate{
+        transform: rotate(180deg);
+        margin-right: 20px;
+        cursor: pointer;
+    }
+    .chevron{
+        margin-right: 20px; 
+        cursor: pointer;
     }
 }
+}
+
+.collapse-description{
+    background: #F7F7F7;
+    padding: 30px 20px;
+    height: auto;
+    border-radius: 10px;
+}
+.show{
+    display: block;
+}
+.hidden{
+    display: none;
+}
+
+@media screen and (max-width: 320px) {
+    .margin-collapse{
+        width: 100%;
+    }
+}
+
+
+
