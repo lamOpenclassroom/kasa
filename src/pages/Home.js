@@ -9,9 +9,9 @@ function Home() {
         <div className='banner-card'>
             <Banner beach={beach} titleHome={titleHome} />
             <div className='figure-grid'>
-            {Data.map((item) => 
-            (<Card key={item.id} title={item.title} image={item.cover} id={item.id} />
-            ))}
+                {Data.map((item) => 
+                (<Card key={item.id} title={item.title} image={item.cover} id={item.id} />
+                ))}
             </div>
         </div>
     )

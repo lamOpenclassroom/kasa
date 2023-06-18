@@ -6,23 +6,27 @@ import StarGrey from '../assets/image/star-grey.png'
 import Data from '../assets/data/annonce.json'
 import Collapse from '../components/Collapse'
 import Error from "./Error"
+import { useEffect, useState } from "react"
 
 function Fiche() {
+        const [data, setData] = useState(null)
         const { idFiche } = useParams();
-        const dataFind = Data.find(item => item.id === idFiche);
 
-        if (dataFind === undefined) {
-                return <Error />;
-        }
-        
-        let pictures = dataFind.pictures;
-        let title = dataFind.title;
-        let location = dataFind.location;
-        let buttons = dataFind.tags;
-        let profilName = dataFind.host.name;
-        let profilPicture = dataFind.host.picture;
-        let description = dataFind.description;
-        let equipment = dataFind.equipments;
+        useEffect(() => {
+                const dataFind = Data.find(item => item.id === idFiche);
+                setData(dataFind)  
+        },[idFiche])
+
+        if (!data) { return <Error/> }
+
+        let pictures = data.pictures;
+        let title = data.title;
+        let location = data.location;
+        let buttons = data.tags;
+        let profilName = data.host.name;
+        let profilPicture = data.host.picture;
+        let description = data.description;
+        let equipment = data.equipments;
         let equipmentMap =
                 equipment.map(((item, index) => (
                         <ul key={index}>
@@ -77,7 +81,7 @@ function Fiche() {
                 </div >
                 )      
                          
-        }
+}
         
         
 export default Fiche;       

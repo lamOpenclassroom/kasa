@@ -7,6 +7,8 @@
     img{
         object-fit: cover;
         border-radius: 25px;
+        height: 223px ;
+        width: 100% ;
     }
     h1{
         font-size: 3rem; 
@@ -15,6 +17,7 @@
         margin-left: 16px;
     }
 }
+
 @media screen and (max-width: 720px) {
     .title-home{
         h1{
@@ -23,11 +26,14 @@
     }
     
 }
+
 @media screen and (max-width: 320px){
     .title-home{
-        margin-bottom: 63px;
-        width: 100vw;
-        height: 111px;
+        margin-bottom: 22px;
+        .img{
+                width: 100vw;
+                height: 111px;
+        }
         h1{
             font-size: 1.5rem;
             width: 210px;

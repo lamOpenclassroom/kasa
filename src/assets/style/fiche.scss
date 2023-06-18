@@ -47,8 +47,10 @@
     .collapse-flex-column{
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
         .margin-collapse-fiche{
-            width: 582px;
+            max-width: 582px;
+            width: 100%;
             .margin-collapse {
                 margin-bottom: 20px; 
                 .white-paragraph{
@@ -59,6 +61,11 @@
     }
 }
 
+@media screen and (max-width: 710px){
+    .margin-collapse-fiche{
+        max-width: 100%;
+    }
+}
 
 @media screen and (max-width:320px) {
     .flex-title-profil{
