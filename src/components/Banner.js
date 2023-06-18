@@ -1,4 +1,4 @@
-import "../style/banner.scss"
+import "../assets/style/banner.scss"
 
 function Banner({ montain, beach, titleHome }) {
         return (

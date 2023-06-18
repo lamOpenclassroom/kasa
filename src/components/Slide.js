@@ -1,4 +1,4 @@
-import '../style/slide.scss';
+import '../assets/style/slide.scss';
 import ChevronLeft from '../assets/image/left-chevron.png'
 import ChevronRight from '../assets/image/right-chevron.png'
 import { useState } from 'react';

@@ -1,4 +1,4 @@
-import "../style/collapse.scss"
+import "../assets/style/collapse.scss"
 import HighChevron from '../assets/image/high-chevron.png'
 import { useState } from "react";
 
@@ -11,7 +11,7 @@ function Collapse({description, equipmentMap,titledesc,titleequip,titleFiab,titl
 
     return (
 
-        //retrait
+        
         <div className="margin-collapse">
                 <div className="collapse">
                     <p className="white-paragraph">{titledesc}{titleequip}{titleFiab}{titleResp}{titleServ}{titleSec}</p>
@@ -24,7 +24,7 @@ function Collapse({description, equipmentMap,titledesc,titleequip,titleFiab,titl
                     </div>   
                 </div>
         </div>
-        //retrait
+        
     )
 }
 export default Collapse;
