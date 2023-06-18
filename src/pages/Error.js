@@ -1,7 +1,16 @@
-//http://localhost:3000/Fiche/5 il faut que l'erreur apparaissent quand un id est différent après fiche (faire un filtre)
+import { Link } from "react-router-dom"
+import "../assets/style/error.scss"
+import Redirect from "../assets/image/404.png"
+
 function Error() {
     return (
-        <h1>ERREUR 404</h1>
+        <div className="error-flex">
+            <div className="para-flex">
+                <img src={Redirect} alt="erreur 404"></img>
+                <p>Oups! La page que vous demandez n'existe pas.</p>
+                <Link className="link" to="/">Retourner sur la page d'acceuil</Link>
+            </div>   
+        </div>
     )
 }
 
