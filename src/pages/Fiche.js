@@ -1,10 +1,10 @@
 import { useParams } from "react-router-dom"
-import Slide from './Slide'
-import '../style/fiche.scss'
+import Slide from '../components/Slide'
+import '../assets/style/fiche.scss'
 import StarOrange from '../assets/image/star-orange.png'
 import StarGrey from '../assets/image/star-grey.png'
-import Data from '../data/annonce.json'
-import Collapse from './Collapse'
+import Data from '../assets/data/annonce.json'
+import Collapse from '../components/Collapse'
 import Error from "./Error"
 
 function Fiche() {

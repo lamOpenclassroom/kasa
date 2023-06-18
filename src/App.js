@@ -1,8 +1,8 @@
 import {Routes, Route} from "react-router-dom"
-import Home from "./components/Home";
-import Fiche from './components/Fiche';
-import Error from './components/Error';
-import About from './components/About';
+import Home from "./pages/Home";
+import Fiche from './pages/Fiche';
+import About from './pages/About';
+import Error from './pages/Error';
 import Header from './components/Header';
 import Footer from './components/Footer';
 

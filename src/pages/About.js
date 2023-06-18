@@ -1,8 +1,7 @@
-//import "../style/collapse.scss"
-import "../style/about.scss"
-import Banner from './Banner'
+import "../assets/style/about.scss"
+import Banner from '../components/Banner'
 import montain from '../assets/image/montagne.png'
-import Collapse from './Collapse'
+import Collapse from '../components/Collapse'
  
 function About() {
     const titleFiab = "Fiabilité"; 
@@ -23,7 +22,7 @@ function About() {
             <div className="collapse-flex-about">
                     <div className="collapse-flex-column-about"> 
                             <div className="margin-collapse-about">
-                            <Collapse titleFiab={titleFiab} descFiab={descFiab} />
+                                <Collapse titleFiab={titleFiab} descFiab={descFiab} />
                             </div>
                             <div className="margin-collapse-about">
                                 <Collapse titleResp={titleResp} descResp={descResp} />

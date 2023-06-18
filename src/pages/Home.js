@@ -1,7 +1,7 @@
-import Banner from './Banner'
+import Banner from '../components/Banner'
 import beach from '../assets/image/image-home.png'
-import Card from './Card'
-import Data from '../data/annonce.json'
+import Card from '../pages/Card'
+import Data from '../assets/data/annonce.json'
 
 function Home() {
    const titleHome = <h1>Chez vous, partout et ailleurs</h1>

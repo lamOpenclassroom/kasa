@@ -14,7 +14,7 @@ function Collapse({description, equipmentMap,titledesc,titleequip,titleFiab,titl
         //retrait
         <div className="margin-collapse">
                 <div className="collapse">
-                    <p>{titledesc}{titleequip}{titleFiab}{titleResp}{titleServ}{titleSec}</p>
+                    <p className="white-paragraph">{titledesc}{titleequip}{titleFiab}{titleResp}{titleServ}{titleSec}</p>
                     <img onClick={CloseDesc} className={closeCollapseDesc ? "chevron-rotate":"chevron"} src={HighChevron} alt="chevron en haut"></img>
                 </div>
                 <div className={closeCollapseDesc ? "hidden":"show"}>
