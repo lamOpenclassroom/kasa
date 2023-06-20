@@ -12,10 +12,10 @@ function Fiche() {
         const [data, setData] = useState(null)
         const { idFiche } = useParams();
 
-        useEffect(() => {
-                const dataFind = Data.find(item => item.id === idFiche);
+        useEffect(() => 
+                {const dataFind = Data.find(item => item.id === idFiche);
                 setData(dataFind)  
-        },[idFiche])
+                },[idFiche])
 
         if (!data) { return <Error/> }
 

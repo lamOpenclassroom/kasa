@@ -43,14 +43,14 @@
 
 .collapse-flex{
     margin-bottom: 25px;
-    width: 100%;
+    //width: 100%;
     .collapse-flex-column{
         display: flex;
         justify-content: space-between;
-        flex-wrap: wrap;
+       // flex-wrap: wrap;
         .margin-collapse-fiche{
-            max-width: 582px;
-            width: 100%;
+            //max-width: 582px;
+            width: 45%;
             .margin-collapse {
                 margin-bottom: 20px; 
                 .white-paragraph{
@@ -62,11 +62,15 @@
 }
 
 @media screen and (max-width: 710px){
-    .margin-collapse-fiche{
-        max-width: 100%;
+        .collapse-flex{
+            .collapse-flex-column{
+                flex-wrap: wrap;
+                .margin-collapse-fiche{
+                width: 100%;
+            }
+        }
     }
 }
-
 @media screen and (max-width:320px) {
     .flex-title-profil{
         flex-direction: column;
@@ -80,16 +84,6 @@
                     width: 13px;
                     height: 13px;
             }
-        }
-    }
-    }
-
-    .collapse-flex{
-    flex-direction: column;
-    .collapse-flex-column{
-        flex-direction: column;
-        .margin-collapse-fiche{
-            width: 100%;
         }
     }
     }

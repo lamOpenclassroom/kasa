@@ -1,11 +1,12 @@
 import "../assets/style/banner.scss"
 
-function Banner({ montain, beach, titleHome }) {
+function Banner({images, title, imgDesc}) {
         return (
             <div className="title-home" >
-                <img src={beach||montain} alt="la mer avec des roches et la montaggne"></img>  
-                {titleHome}
+                <img src={images} alt={imgDesc}></img>  
+                {title}
             </div>
         )
 }
 export default Banner
+

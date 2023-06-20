@@ -8,6 +8,9 @@ header{
     }
 
     .navigation {
+        .active{
+            text-decoration: underline;
+        }
         a{
             color: #FF6060;
             text-decoration: none;
