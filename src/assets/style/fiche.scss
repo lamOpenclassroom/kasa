@@ -2,7 +2,7 @@
 .flex-title-profil{
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: baseline;
     button{
         padding: 5px 40px;
         border-radius: 10px;
@@ -14,13 +14,13 @@
     }
     .flex-profil{
         display: flex;
-        align-items: center;
         flex-direction: column;
         justify-content: space-between;
         .flex-profil_withoutstars{
             display: flex;
             p{
                 text-align: right;
+                width: 50%;
             }
             img{
                 width: 64px;
@@ -30,26 +30,20 @@
             }
         }
         .all-stars{
-            max-width: 185px;
-            min-width: 66px;
-            width: 100%;
             display: flex;
-            flex-direction: row;
             justify-content: space-between;
-            margin-top: 27px;
+            margin-top: 18px;
+            width: 150px;
         }
     }
 }
 
 .collapse-flex{
     margin-bottom: 25px;
-    //width: 100%;
     .collapse-flex-column{
         display: flex;
         justify-content: space-between;
-       // flex-wrap: wrap;
         .margin-collapse-fiche{
-            //max-width: 582px;
             width: 45%;
             .margin-collapse {
                 margin-bottom: 20px; 
@@ -64,7 +58,7 @@
 @media screen and (max-width: 710px){
         .collapse-flex{
             .collapse-flex-column{
-                flex-wrap: wrap;
+               flex-wrap: wrap;
                 .margin-collapse-fiche{
                 width: 100%;
             }
@@ -79,7 +73,8 @@
             width: 100vw;
             margin-bottom: 16px;
             .all-stars{
-                max-width: 100px;
+               max-width: 100px;
+               
             .star{
                     width: 13px;
                     height: 13px;

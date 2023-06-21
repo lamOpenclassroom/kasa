@@ -7,6 +7,7 @@ import Data from '../assets/data/annonce.json'
 import Collapse from '../components/Collapse'
 import Error from "./Error"
 import { useEffect, useState } from "react"
+import Ratinghousing from "../components/Ratinghousing"
 
 function Fiche() {
         const [data, setData] = useState(null)
@@ -17,14 +18,15 @@ function Fiche() {
                 setData(dataFind)  
                 },[idFiche])
 
-        if (!data) { return <Error/> }
-
+        if (!data) { return <Error /> }
+        
         let pictures = data.pictures;
         let title = data.title;
         let location = data.location;
         let buttons = data.tags;
         let profilName = data.host.name;
         let profilPicture = data.host.picture;
+        let rating = data.rating;
         let description = data.description;
         let equipment = data.equipments;
         let equipmentMap =
@@ -56,15 +58,11 @@ function Fiche() {
                                                         <img src={profilPicture} alt='profil-fiche'></img>
                                                 </div>
                                 
-                                                <div className="all-stars">
-                                                        <img className="star" src={StarOrange} alt='étoile orange'></img>
-                                                        <img className="star" src={StarOrange} alt='étoile orange'></img>
-                                                        <img className="star" src={StarOrange} alt='étoile orange'></img>
-                                                        <img className="star" src={StarGrey} alt='étoile grise'></img>
-                                                        <img className="star" src={StarGrey} alt='étoile grise'></img>
-                                                </div>
+                                                <div >
+                                                        <Ratinghousing ratingValue={rating} starOrange={StarOrange} starGrey={StarGrey}/> 
+                                                </div>        
                                         </div>
-                                                        
+                                           
                         </div>
                         <div className="my-collapse">
                                 <div className="collapse-flex">
